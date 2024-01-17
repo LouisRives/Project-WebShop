@@ -1,0 +1,2455 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524 -->
+<html dir="ltr" lang="en" xml:lang="en" class="yui3-js-enabled"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ue dbweb 4 architecture web et base de donnees (S-U06-0077): Sujet du mini-projet</title>
+    <link rel="shortcut icon" href="https://e-uapv2022.univ-avignon.fr/theme/image.php/boost/theme/1683275310/favicon">
+    
+<meta name="keywords" content="moodle, ue dbweb 4 architecture web et base de donnees (S-U06-0077): Sujet du mini-projet">
+<link rel="stylesheet" type="text/css" href="./ue dbweb 4 architecture web et base de donnees (S-U06-0077)_ Sujet du mini-projet_files/combo"><script charset="utf-8" id="yui_3_17_2_1_1684169313033_8" src="./ue dbweb 4 architecture web et base de donnees (S-U06-0077)_ Sujet du mini-projet_files/combo(1)" async=""></script><link charset="utf-8" rel="stylesheet" id="yui_3_17_2_1_1684169313033_19" href="./ue dbweb 4 architecture web et base de donnees (S-U06-0077)_ Sujet du mini-projet_files/combo(2)"><script charset="utf-8" id="yui_3_17_2_1_1684169313033_20" src="./ue dbweb 4 architecture web et base de donnees (S-U06-0077)_ Sujet du mini-projet_files/combo(3)" async=""></script><script charset="utf-8" id="yui_3_17_2_1_1684169313033_28" src="./ue dbweb 4 architecture web et base de donnees (S-U06-0077)_ Sujet du mini-projet_files/combo(4)" async=""></script><script charset="utf-8" id="yui_3_17_2_1_1684169313033_53" src="./ue dbweb 4 architecture web et base de donnees (S-U06-0077)_ Sujet du mini-projet_files/MathJax.js.téléchargement" async=""></script><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="./ue dbweb 4 architecture web et base de donnees (S-U06-0077)_ Sujet du mini-projet_files/styles.php">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/e-uapv2022.univ-avignon.fr","homeurl":{},"sesskey":"T4tHODGCHa","sessiontimeout":"28800","sessiontimeoutwarning":"1200","themerev":"1683275310","slasharguments":1,"theme":"boost","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1683275310","admin":"admin","svgicons":true,"usertimezone":"Europe\/Paris","courseId":3149,"courseContextId":20177,"contextid":20232,"contextInstanceId":13524,"langrev":1683600971,"templaterev":"1683275310"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/e-uapv2022.univ-avignon.fr\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/e-uapv2022.univ-avignon.fr\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/e-uapv2022.univ-avignon.fr\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/e-uapv2022.univ-avignon.fr\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/e-uapv2022.univ-avignon.fr\/theme\/yui_combo.php?m\/1683275310\/","combine":true,"comboBase":"https:\/\/e-uapv2022.univ-avignon.fr\/theme\/yui_combo.php?","ext":false,"root":"m\/1683275310\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_offlinequiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_offlinequiz-offlinequizbase","moodle-mod_offlinequiz-util-base","moodle-mod_offlinequiz-util-page","moodle-mod_offlinequiz-util-slot","moodle-course-util"]},"moodle-mod_offlinequiz-modform":{"requires":["base","node","event"]},"moodle-mod_offlinequiz-repaginate":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_offlinequiz-offlinequizquestionbank":{"requires":["base","event","node","io","io-form","yui-later","moodle-question-qbankmanager","moodle-qbank_editquestion-chooser","moodle-question-searchform","moodle-core-notification"]},"moodle-mod_offlinequiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_offlinequiz-offlinequizbase","moodle-mod_offlinequiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_offlinequiz-offlinequizbase":{"requires":["base","node"]},"moodle-mod_offlinequiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_offlinequiz-util","querystring-parse"]},"moodle-mod_offlinequiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_offlinequiz-randomquestion":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_offlinequiz-util":{"requires":["node"],"use":["moodle-mod_offlinequiz-util-base"],"submodules":{"moodle-mod_offlinequiz-util-base":{},"moodle-mod_offlinequiz-util-slot":{"requires":["node","moodle-mod_offlinequiz-util-base"]},"moodle-mod_offlinequiz-util-page":{"requires":["node","moodle-mod_offlinequiz-util-base"]}}},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_scheduler-studentlist":{"requires":["base","node","event","io"]},"moodle-mod_scheduler-delselected":{"requires":["base","node","event"]},"moodle-mod_scheduler-saveseen":{"requires":["base","node","event"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/e-uapv2022.univ-avignon.fr\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/e-uapv2022.univ-avignon.fr\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1683275310\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/e-uapv2022.univ-avignon.fr\/lib\/javascript.php\/1683275310\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/e-uapv2022.univ-avignon.fr\/lib\/javascript.php\/1683275310\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<link rel="stylesheet" href="./ue dbweb 4 architecture web et base de donnees (S-U06-0077)_ Sujet du mini-projet_files/default.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="core/first" src="./ue dbweb 4 architecture web et base de donnees (S-U06-0077)_ Sujet du mini-projet_files/requirejs.php"></script><script type="text/x-mathjax-config;executed=true">
+MathJax.Hub.Config({
+    config: ["Accessible.js", "Safe.js"],
+    errorSettings: { message: ["!"] },
+    skipStartupTypeset: true,
+    messageStyle: "none"
+});
+</script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="core_form/events" src="./ue dbweb 4 architecture web et base de donnees (S-U06-0077)_ Sujet du mini-projet_files/requirejs(1).php"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="./ue dbweb 4 architecture web et base de donnees (S-U06-0077)_ Sujet du mini-projet_files/javascript.php"></script><script type="text/javascript">
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13469');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13470');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13471');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13473');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13474');
+                });
+                ;
+
+    require(['core_courseformat/local/courseindex/section'], function(component) {
+        component.init('1-course-index-section-16724');
+    });
+    ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13477');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13472');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13478');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13479');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13480');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13481');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13482');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13483');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13484');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13485');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13486');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13487');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13488');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13489');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13490');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-66985');
+                });
+                ;
+
+    require(['core_courseformat/local/courseindex/section'], function(component) {
+        component.init('1-course-index-section-16725');
+    });
+    ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13492');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13493');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13494');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13495');
+                });
+                ;
+
+    require(['core_courseformat/local/courseindex/section'], function(component) {
+        component.init('1-course-index-section-16726');
+    });
+    ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13496');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13497');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13498');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13499');
+                });
+                ;
+
+    require(['core_courseformat/local/courseindex/section'], function(component) {
+        component.init('1-course-index-section-16727');
+    });
+    ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13500');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13501');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13502');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13503');
+                });
+                ;
+
+    require(['core_courseformat/local/courseindex/section'], function(component) {
+        component.init('1-course-index-section-16728');
+    });
+    ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13505');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13506');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13507');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13508');
+                });
+                ;
+
+    require(['core_courseformat/local/courseindex/section'], function(component) {
+        component.init('1-course-index-section-16729');
+    });
+    ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13509');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13511');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13512');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13513');
+                });
+                ;
+
+    require(['core_courseformat/local/courseindex/section'], function(component) {
+        component.init('1-course-index-section-16730');
+    });
+    ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-68018');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13516');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13518');
+                });
+                ;
+
+    require(['core_courseformat/local/courseindex/section'], function(component) {
+        component.init('1-course-index-section-16731');
+    });
+    ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13519');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13521');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13522');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13523');
+                });
+                ;
+
+    require(['core_courseformat/local/courseindex/section'], function(component) {
+        component.init('1-course-index-section-16732');
+    });
+    ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13524');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13527');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('1-course-index-cm-13529');
+                });
+                ;
+
+    require(['core_courseformat/local/courseindex/section'], function(component) {
+        component.init('1-course-index-section-16733');
+    });
+    ;
+
+require(['core_courseformat/local/courseindex/courseindex'], function(component) {
+    component.init('1-course-index');
+});
+</script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888; display: contents}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body id="page-mod-page-view" class="format-topics limitedwidth path-mod path-mod-page chrome dir-ltr lang-en yui-skin-sam yui3-skin-sam e-uapv2022-univ-avignon-fr pagelayout-incourse course-3149 context-20232 cmid-13524 cm-type-page category-2502 uses-drawers jsenabled vsc-initialized scrolled"><div id="MathJax_Message" style="display: none;"></div>
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+<div id="page-wrapper" class="d-print-block">
+
+    <div>
+    <a class="sr-only sr-only-focusable" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524#maincontent">Skip to main content</a>
+</div><script src="./ue dbweb 4 architecture web et base de donnees (S-U06-0077)_ Sujet du mini-projet_files/javascript(1).php"></script>
+<script src="./ue dbweb 4 architecture web et base de donnees (S-U06-0077)_ Sujet du mini-projet_files/combo(5)"></script><script src="./ue dbweb 4 architecture web et base de donnees (S-U06-0077)_ Sujet du mini-projet_files/javascript(2).php"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+
+    <nav class="navbar fixed-top navbar-light bg-white navbar-expand" aria-label="Site navigation">
+    
+        <button class="navbar-toggler aabtn d-block d-md-none px-1 my-1 border-0" data-toggler="drawers" data-action="toggle" data-target="theme_boost-drawers-primary">
+            <span class="navbar-toggler-icon"></span>
+            <span class="sr-only">Side panel</span>
+        </button>
+    
+        <a href="https://e-uapv2022.univ-avignon.fr/" class="navbar-brand d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+    
+                <img src="./ue dbweb 4 architecture web et base de donnees (S-U06-0077)_ Sujet du mini-projet_files/logo-au-blanc.png" class="logo mr-1" alt="E-uapv2022">
+        </a>
+            <div class="primary-navigation">
+                <nav class="moremenu navigation observed">
+                    <ul id="moremenu-64626262850cd-navbar-nav" role="menubar" class="nav more-nav navbar-nav">
+                                <li data-key="home" class="nav-item" role="none" data-forceintomoremenu="false">
+                                            <a role="menuitem" class="nav-link  " href="https://e-uapv2022.univ-avignon.fr/" tabindex="0" aria-current="true">
+                                                Home
+                                            </a>
+                                </li>
+                                <li data-key="myhome" class="nav-item" role="none" data-forceintomoremenu="false">
+                                            <a role="menuitem" class="nav-link  " href="https://e-uapv2022.univ-avignon.fr/my/" tabindex="-1">
+                                                Dashboard
+                                            </a>
+                                </li>
+                                <li data-key="mycourses" class="nav-item" role="none" data-forceintomoremenu="false">
+                                            <a role="menuitem" class="nav-link  " href="https://e-uapv2022.univ-avignon.fr/my/courses.php" tabindex="-1">
+                                                My courses
+                                            </a>
+                                </li>
+                        <li role="none" class="nav-item dropdown dropdownmoremenu d-none" data-region="morebutton">
+                            <a class="dropdown-toggle nav-link " href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524#" id="moremenu-dropdown-64626262850cd" role="menuitem" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="-1">
+                                More
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left" data-region="moredropdown" aria-labelledby="moremenu-dropdown-64626262850cd" role="menu">
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+    
+        <ul class="navbar-nav d-none d-md-flex my-1 px-1">
+            <!-- page_heading_menu -->
+            
+        </ul>
+    
+        <div id="usernavigation" class="navbar-nav ml-auto">
+            <div class="popover-region collapsed popover-region-notifications" id="nav-notification-popover-container" data-userid="6138" data-region="popover-region">
+    <div class="popover-region-toggle nav-link icon-no-margin" data-region="popover-region-toggle" role="button" aria-controls="popover-region-container-646262628aaac64626262709ec3" aria-haspopup="true" aria-label="  Show notification window with 1 new notifications  " tabindex="0">
+                <i class="icon fa fa-bell-o fa-fw " title="Toggle notifications menu" role="img" aria-label="Toggle notifications menu"></i>
+        <div class="count-container " data-region="count-container" aria-hidden="true">
+            1
+        </div>
+
+    </div>
+    <div id="popover-region-container-646262628aaac64626262709ec3" class="popover-region-container" data-region="popover-region-container" aria-expanded="false" aria-hidden="true" aria-label="Notification window" role="region">
+        <div class="popover-region-header-container">
+            <h3 class="popover-region-header-text" data-region="popover-region-header-text">Notifications</h3>
+            <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <a class="mark-all-read-button" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524#" title="Mark all as read" data-action="mark-all-read" role="button" aria-label="Mark all as read">
+            <span class="normal-icon"><i class="icon fa fa-check fa-fw " aria-hidden="true"></i></span>
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Loading" role="img" aria-label="Loading"></i></span>
+        </a>
+            <a href="https://e-uapv2022.univ-avignon.fr/message/notificationpreferences.php" title="Notification preferences" aria-label="Notification preferences">
+                <i class="icon fa fa-cog fa-fw " aria-hidden="true"></i></a>
+</div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+            <div class="popover-region-content" data-region="popover-region-content">
+                        <div class="all-notifications" data-region="all-notifications" role="log" aria-busy="false" aria-atomic="false" aria-relevant="additions"></div>
+        <div class="empty-message" tabindex="0" data-region="empty-message">You have no notifications</div>
+
+            </div>
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Loading" role="img" aria-label="Loading"></i></span>
+        </div>
+                <a class="see-all-link" href="https://e-uapv2022.univ-avignon.fr/message/output/popup/notifications.php">
+                    <div class="popover-region-footer-container">
+                        <div class="popover-region-seeall-text">See all</div>
+                    </div>
+                </a>
+    </div>
+</div>
+            <div class="d-flex align-items-stretch usermenu-container" data-region="usermenu">
+                    <div class="usermenu">
+                            <div class="dropdown show">
+                                <a href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524#" role="button" id="user-menu-toggle" data-toggle="dropdown" aria-label="User menu" aria-haspopup="true" aria-controls="user-action-menu" class="btn dropdown-toggle">
+                                    <span class="userbutton">
+                                        <span class="avatars">
+                                                <span class="avatar current">
+                                                    <span class="userinitials size-35">LR</span>
+                                                </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div id="user-action-menu" class="dropdown-menu dropdown-menu-right">
+                                    <div id="usermenu-carousel" class="carousel slide" data-touch="false" data-interval="false" data-keyboard="false">
+                                        <div class="carousel-inner">
+                                            <div id="carousel-item-main" class="carousel-item active" role="menu" tabindex="-1" aria-label="User">
+                                                        <a href="https://e-uapv2022.univ-avignon.fr/user/profile.php" class="dropdown-item" role="menuitem" tabindex="-1">
+                                                                
+                                                            Profile
+                                                        </a>
+                                                    
+                                                        <a href="https://e-uapv2022.univ-avignon.fr/grade/report/overview/index.php" class="dropdown-item" role="menuitem" tabindex="-1">
+                                                                
+                                                            Grades
+                                                        </a>
+                                                    
+                                                        <a href="https://e-uapv2022.univ-avignon.fr/calendar/view.php?view=month" class="dropdown-item" role="menuitem" tabindex="-1">
+                                                                
+                                                            Calendar
+                                                        </a>
+                                                    
+                                                        <a href="https://e-uapv2022.univ-avignon.fr/user/files.php" class="dropdown-item" role="menuitem" tabindex="-1">
+                                                                
+                                                            Private files
+                                                        </a>
+                                                    
+                                                        <a href="https://e-uapv2022.univ-avignon.fr/reportbuilder/index.php" class="dropdown-item" role="menuitem" tabindex="-1">
+                                                                
+                                                            Reports
+                                                        </a>
+                                                    
+                                                    <div class="dropdown-divider"></div>
+                                                        <a href="https://e-uapv2022.univ-avignon.fr/user/preferences.php" class="dropdown-item" role="menuitem" tabindex="-1">
+                                                                
+                                                            Preferences
+                                                        </a>
+                                                    
+                                                        <a href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524#" class="carousel-navigation-link dropdown-item" role="menuitem" tabindex="-1" data-carousel-target-id="carousel-item-64626262853ad">
+                                                                
+                                                            Language
+                                                        </a>
+                                                    <div class="dropdown-divider"></div>
+                                                        <a href="https://e-uapv2022.univ-avignon.fr/login/logout.php?sesskey=T4tHODGCHa" class="dropdown-item" role="menuitem" tabindex="-1">
+                                                                
+                                                            Log out
+                                                        </a>
+                                                    
+                                            </div>
+                                                <div id="carousel-item-64626262853ad" role="menu" class="carousel-item submenu" tabindex="-1" aria-label="Language selector">
+                                                    <div class="d-flex flex-column h-100">
+                                                        <div class="header">
+                                                            <button type="button" class="btn btn-icon carousel-navigation-link text-decoration-none text-body" data-carousel-target-id="carousel-item-main" aria-label="Go back to user menu">
+                                                                <span class="dir-rtl-hide"><img class="icon " alt="" aria-hidden="true" src="./ue dbweb 4 architecture web et base de donnees (S-U06-0077)_ Sujet du mini-projet_files/arrow-left.svg"></span>
+                                                                <span class="dir-ltr-hide"><img class="icon " alt="" aria-hidden="true" src="./ue dbweb 4 architecture web et base de donnees (S-U06-0077)_ Sujet du mini-projet_files/arrow-right.svg"></span>
+                                                            </button>
+                                                            <span class="pl-2" id="carousel-item-title-64626262853ad">Language selector</span>
+                                                        </div>
+                                                        <div class="dropdown-divider"></div>
+                                                        <div class="items h-100 overflow-auto" role="menu" aria-labelledby="carousel-item-title-64626262853ad">
+                                                                    <a href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524#" class="dropdown-item pl-5" role="menuitem" tabindex="-1" aria-current="true">
+                                                                        English ‎(en)‎
+                                                                    </a>
+                                                                    <a href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524&amp;lang=fr" class="dropdown-item pl-5" role="menuitem" tabindex="-1" lang="fr">
+                                                                        Français ‎(fr)‎
+                                                                    </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+            
+        </div>
+    </nav>
+    
+
+<div class="drawer drawer-left drawer-primary d-print-none" data-region="fixed-drawer" id="theme_boost-drawers-primary" data-preference="" data-state="show-drawer-primary" data-forceopen="0" data-close-on-resize="1" aria-hidden="true">
+    <div class="drawerheader">
+        <button class="btn drawertoggle icon-no-margin hidden" data-toggler="drawers" data-action="closedrawer" data-target="theme_boost-drawers-primary" data-toggle="tooltip" data-placement="right" title="Close drawer" data-aria-hidden-tab-index="" tabindex="-1">
+            <i class="icon fa fa-times fa-fw " aria-hidden="true"></i>
+        </button>
+    </div>
+    <div class="drawercontent drag-container" data-usertour="scroller">
+                <div class="list-group">
+                <a href="https://e-uapv2022.univ-avignon.fr/" class="list-group-item list-group-item-action  " data-aria-hidden-tab-index="" tabindex="-1">
+                    Home
+                </a>
+                <a href="https://e-uapv2022.univ-avignon.fr/my/" class="list-group-item list-group-item-action  " data-aria-hidden-tab-index="" tabindex="-1">
+                    Dashboard
+                </a>
+                <a href="https://e-uapv2022.univ-avignon.fr/my/courses.php" class="list-group-item list-group-item-action  " data-aria-hidden-tab-index="" tabindex="-1">
+                    My courses
+                </a>
+        </div>
+
+    </div>
+</div>
+        <div class="drawer drawer-left d-print-none scrolled" data-region="fixed-drawer" id="theme_boost-drawers-courseindex" data-preference="drawer-open-index" data-state="show-drawer-left" data-forceopen="0" data-close-on-resize="0" aria-hidden="true">
+    <div class="drawerheader">
+        <button class="btn drawertoggle icon-no-margin hidden" data-toggler="drawers" data-action="closedrawer" data-target="theme_boost-drawers-courseindex" data-toggle="tooltip" data-placement="right" title="Close course index" data-aria-hidden-tab-index="" tabindex="-1">
+            <i class="icon fa fa-times fa-fw " aria-hidden="true"></i>
+        </button>
+    </div>
+    <div class="drawercontent drag-container" data-usertour="scroller">
+                        <nav id="courseindex" class="courseindex">
+    <div id="courseindex-content">
+        <div id="1-course-index" class="courseindex " role="tree">
+
+
+    <div class="courseindex-section " id="1-course-index-section-16724" data-for="section" data-id="16724" data-number="0" role="treeitem" aria-owns="courseindexcollapse0" tabindex="-1" aria-selected="true" data-aria-hidden-tab-index="0">
+        <div class="courseindex-item d-flex
+                
+                
+                courseindex-section-title" id="courseindexsection0" data-for="section_item" tabindex="-1">
+            <a data-toggle="collapse" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524#courseindexcollapse0" class="courseindex-chevron icons-collapse-expand " aria-expanded="true" aria-controls="courseindexcollapse0" tabindex="-1" data-aria-hidden-tab-index="-1">
+                <span class="collapsed-icon icon-no-margin mr-1" title="Expand" tabindex="-1">
+                    <span class="dir-rtl-hide" tabindex="-1"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="dir-ltr-hide" tabindex="-1"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="sr-only" tabindex="-1">Expand</span>
+                </span>
+                <span class="expanded-icon icon-no-margin mr-1" title="Collapse" tabindex="-1">
+                    <i class="icon fa fa-chevron-down fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    <span class="sr-only" tabindex="-1">Collapse</span>
+                </span>
+            </a>
+            <a href="https://e-uapv2022.univ-avignon.fr/course/view.php?id=3149#section-0" class="courseindex-link text-truncate" data-action="togglecourseindexsection" data-for="section_title" tabindex="-1" data-aria-hidden-tab-index="-1">
+                Généralités
+            </a>
+            <span class="current-badge badge badge-primary ml-2 px-2 rounded-pill" tabindex="-1">
+                Highlighted
+            </span>
+            <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+            </span>
+            <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+        </div>
+        <div id="courseindexcollapse0" class="courseindex-item-content collapse show" aria-labelledby="courseindexsection0" role="group" tabindex="-1">
+            <ul class="courseindex-sectioncontent unlist" data-for="cmlist" data-id="16724" role="group" tabindex="-1">
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13469" data-for="cm" data-id="13469" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_none" data-for="cm_completion" data-value="NaN" id="yui_3_17_2_1_1684169313033_131"></span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/forum/view.php?id=13469" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Annonces officielles
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                          d-flex-noedit 
+                        " id="1-course-index-cm-13470" data-for="cm" data-id="13470" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1684169313033_175">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                    <span class="courseindex-name text-truncate" data-for="cm_name" tabindex="-1">
+                        Présentation du module DBWeb4
+                    </span>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                          d-flex-noedit 
+                        " id="1-course-index-cm-13471" data-for="cm" data-id="13471" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_incomplete" data-for="cm_completion" data-value="0" id="yui_3_17_2_1_1684169313033_181">
+        <i class="icon fa fa-circle-thin fa-fw " title="To do" role="img" aria-label="To do"></i>
+    </span>
+                    <span class="courseindex-name text-truncate" data-for="cm_name" tabindex="-1">
+                        Notions abordées Rappels PHP - PHP Cookies/Session...
+                    </span>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13473" data-for="cm" data-id="13473" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_none" data-for="cm_completion" data-value="NaN" id="yui_3_17_2_1_1684169313033_133"></span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/forum/view.php?id=13473" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Forum
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13474" data-for="cm" data-id="13474" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_incomplete" data-for="cm_completion" data-value="0" id="yui_3_17_2_1_1684169313033_187">
+        <i class="icon fa fa-circle-thin fa-fw " title="To do" role="img" aria-label="To do"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/forum/view.php?id=13474" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Forum de groupe
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="courseindex-section " id="1-course-index-section-16725" data-for="section" data-id="16725" data-number="1" role="treeitem" aria-owns="courseindexcollapse1" tabindex="-1" aria-selected="false">
+        <div class="courseindex-item d-flex
+                
+                
+                courseindex-section-title" id="courseindexsection1" data-for="section_item" tabindex="-1">
+            <a data-toggle="collapse" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524#courseindexcollapse1" class="courseindex-chevron icons-collapse-expand " aria-expanded="true" aria-controls="courseindexcollapse1" tabindex="-1" data-aria-hidden-tab-index="-1">
+                <span class="collapsed-icon icon-no-margin mr-1" title="Expand" tabindex="-1">
+                    <span class="dir-rtl-hide" tabindex="-1"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="dir-ltr-hide" tabindex="-1"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="sr-only" tabindex="-1">Expand</span>
+                </span>
+                <span class="expanded-icon icon-no-margin mr-1" title="Collapse" tabindex="-1">
+                    <i class="icon fa fa-chevron-down fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    <span class="sr-only" tabindex="-1">Collapse</span>
+                </span>
+            </a>
+            <a href="https://e-uapv2022.univ-avignon.fr/course/view.php?id=3149#section-1" class="courseindex-link text-truncate" data-action="togglecourseindexsection" data-for="section_title" tabindex="-1" data-aria-hidden-tab-index="-1">
+                Cours
+            </a>
+            <span class="current-badge badge badge-primary ml-2 px-2 rounded-pill" tabindex="-1">
+                Highlighted
+            </span>
+            <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+            </span>
+            <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+        </div>
+        <div id="courseindexcollapse1" class="courseindex-item-content collapse show" aria-labelledby="courseindexsection1" role="group" tabindex="-1">
+            <ul class="courseindex-sectioncontent unlist" data-for="cmlist" data-id="16725" role="group" tabindex="-1">
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                          d-flex-noedit 
+                        " id="1-course-index-cm-13477" data-for="cm" data-id="13477" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_none" data-for="cm_completion" data-value="NaN" id="yui_3_17_2_1_1684169313033_135"></span>
+                    <span class="courseindex-name text-truncate" data-for="cm_name" tabindex="-1">
+                        Versions électroniques du cours Le cours est dipon...
+                    </span>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13472" data-for="cm" data-id="13472" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_none" data-for="cm_completion" data-value="NaN" id="yui_3_17_2_1_1684169313033_137"></span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/choicegroup/view.php?id=13472" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Pas de groupe ? ==&gt; Choix du groupe
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13478" data-for="cm" data-id="13478" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_none" data-for="cm_completion" data-value="NaN" id="yui_3_17_2_1_1684169313033_139"></span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/resource/view.php?id=13478" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Archive des exemples
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        dimmed
+                         d-flex  
+                        " id="1-course-index-cm-13479" data-for="cm" data-id="13479" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_incomplete" data-for="cm_completion" data-value="0" id="yui_3_17_2_1_1684169313033_193">
+        <i class="icon fa fa-circle-thin fa-fw " title="To do" role="img" aria-label="To do"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/resource/view.php?id=13479" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Partie 0 en version PDF : Présentation du module
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        restrictions
+                        dimmed
+                         d-flex  
+                        " id="1-course-index-cm-13480" data-for="cm" data-id="13480" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_incomplete" data-for="cm_completion" data-value="0" id="yui_3_17_2_1_1684169313033_199">
+        <i class="icon fa fa-circle-thin fa-fw " title="To do" role="img" aria-label="To do"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524#module-13480" data-for="cm_name" tabindex="-1" data-anchor="true" data-aria-hidden-tab-index="-1">
+                                Partie 1 vidéos :  Rappels PHP - PHP Cookies/Session - W3.CSS
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        restrictions
+                        dimmed
+                         d-flex  
+                        " id="1-course-index-cm-13481" data-for="cm" data-id="13481" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_incomplete" data-for="cm_completion" data-value="0" id="yui_3_17_2_1_1684169313033_205">
+        <i class="icon fa fa-circle-thin fa-fw " title="To do" role="img" aria-label="To do"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524#module-13481" data-for="cm_name" tabindex="-1" data-anchor="true" data-aria-hidden-tab-index="-1">
+                                Partie 1 en version PDF : Rappels PHP - PHP Cookies/Session - W3.CSS
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13482" data-for="cm" data-id="13482" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1684169313033_211">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/quiz/view.php?id=13482" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                QCM Partie Rappels PHP - PHP Cookies/Session - Rappels W3.CSS
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        restrictions
+                        dimmed
+                         d-flex  
+                        " id="1-course-index-cm-13483" data-for="cm" data-id="13483" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_incomplete" data-for="cm_completion" data-value="0" id="yui_3_17_2_1_1684169313033_217">
+        <i class="icon fa fa-circle-thin fa-fw " title="To do" role="img" aria-label="To do"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524#module-13483" data-for="cm_name" tabindex="-1" data-anchor="true" data-aria-hidden-tab-index="-1">
+                                Partie 2 vidéos :  PHP objet
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        restrictions
+                        dimmed
+                         d-flex  
+                        " id="1-course-index-cm-13484" data-for="cm" data-id="13484" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_incomplete" data-for="cm_completion" data-value="0" id="yui_3_17_2_1_1684169313033_223">
+        <i class="icon fa fa-circle-thin fa-fw " title="To do" role="img" aria-label="To do"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524#module-13484" data-for="cm_name" tabindex="-1" data-anchor="true" data-aria-hidden-tab-index="-1">
+                                Partie 2 en version PDF : PHP objet
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13485" data-for="cm" data-id="13485" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1684169313033_229">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/quiz/view.php?id=13485" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                QCM Partie PHP objet
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        restrictions
+                        dimmed
+                         d-flex  
+                        " id="1-course-index-cm-13486" data-for="cm" data-id="13486" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_incomplete" data-for="cm_completion" data-value="0" id="yui_3_17_2_1_1684169313033_235">
+        <i class="icon fa fa-circle-thin fa-fw " title="To do" role="img" aria-label="To do"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524#module-13486" data-for="cm_name" tabindex="-1" data-anchor="true" data-aria-hidden-tab-index="-1">
+                                Partie 3 vidéos :  PHP DB
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        restrictions
+                        dimmed
+                         d-flex  
+                        " id="1-course-index-cm-13487" data-for="cm" data-id="13487" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_incomplete" data-for="cm_completion" data-value="0" id="yui_3_17_2_1_1684169313033_241">
+        <i class="icon fa fa-circle-thin fa-fw " title="To do" role="img" aria-label="To do"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524#module-13487" data-for="cm_name" tabindex="-1" data-anchor="true" data-aria-hidden-tab-index="-1">
+                                Partie 3 en version PDF : PHP DB
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13488" data-for="cm" data-id="13488" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1684169313033_247">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/quiz/view.php?id=13488" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                QCM Partie PHP DB
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        restrictions
+                        dimmed
+                         d-flex  
+                        " id="1-course-index-cm-13489" data-for="cm" data-id="13489" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_incomplete" data-for="cm_completion" data-value="0" id="yui_3_17_2_1_1684169313033_253">
+        <i class="icon fa fa-circle-thin fa-fw " title="To do" role="img" aria-label="To do"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524#module-13489" data-for="cm_name" tabindex="-1" data-anchor="true" data-aria-hidden-tab-index="-1">
+                                Partie 4 vidéos :  jQuery
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        restrictions
+                        dimmed
+                         d-flex  
+                        " id="1-course-index-cm-13490" data-for="cm" data-id="13490" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_incomplete" data-for="cm_completion" data-value="0" id="yui_3_17_2_1_1684169313033_259">
+        <i class="icon fa fa-circle-thin fa-fw " title="To do" role="img" aria-label="To do"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524#module-13490" data-for="cm_name" tabindex="-1" data-anchor="true" data-aria-hidden-tab-index="-1">
+                                Partie 4 en version PDF : jQuery
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-66985" data-for="cm" data-id="66985" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1684169313033_265">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/quiz/view.php?id=66985" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                QCM Partie jQuery
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="courseindex-section " id="1-course-index-section-16726" data-for="section" data-id="16726" data-number="2" role="treeitem" aria-owns="courseindexcollapse2" tabindex="-1" aria-selected="false">
+        <div class="courseindex-item d-flex
+                
+                
+                courseindex-section-title" id="courseindexsection2" data-for="section_item" tabindex="-1">
+            <a data-toggle="collapse" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524#courseindexcollapse2" class="courseindex-chevron icons-collapse-expand " aria-expanded="true" aria-controls="courseindexcollapse2" tabindex="-1" data-aria-hidden-tab-index="-1">
+                <span class="collapsed-icon icon-no-margin mr-1" title="Expand" tabindex="-1">
+                    <span class="dir-rtl-hide" tabindex="-1"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="dir-ltr-hide" tabindex="-1"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="sr-only" tabindex="-1">Expand</span>
+                </span>
+                <span class="expanded-icon icon-no-margin mr-1" title="Collapse" tabindex="-1">
+                    <i class="icon fa fa-chevron-down fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    <span class="sr-only" tabindex="-1">Collapse</span>
+                </span>
+            </a>
+            <a href="https://e-uapv2022.univ-avignon.fr/course/view.php?id=3149#section-2" class="courseindex-link text-truncate" data-action="togglecourseindexsection" data-for="section_title" tabindex="-1" data-aria-hidden-tab-index="-1">
+                Ressources documentaires
+            </a>
+            <span class="current-badge badge badge-primary ml-2 px-2 rounded-pill" tabindex="-1">
+                Highlighted
+            </span>
+            <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+            </span>
+            <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+        </div>
+        <div id="courseindexcollapse2" class="courseindex-item-content collapse show" aria-labelledby="courseindexsection2" role="group" tabindex="-1">
+            <ul class="courseindex-sectioncontent unlist" data-for="cmlist" data-id="16726" role="group" tabindex="-1">
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13492" data-for="cm" data-id="13492" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_none" data-for="cm_completion" data-value="NaN" id="yui_3_17_2_1_1684169313033_141"></span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/url/view.php?id=13492" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Les standards officiels : w3c (en anglais)
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13493" data-for="cm" data-id="13493" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_none" data-for="cm_completion" data-value="NaN" id="yui_3_17_2_1_1684169313033_143"></span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/url/view.php?id=13493" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Traductions partielles du w3c (en francais)
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13494" data-for="cm" data-id="13494" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_none" data-for="cm_completion" data-value="NaN" id="yui_3_17_2_1_1684169313033_145"></span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13494" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Autres liens utiles
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13495" data-for="cm" data-id="13495" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_none" data-for="cm_completion" data-value="NaN" id="yui_3_17_2_1_1684169313033_147"></span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/url/view.php?id=13495" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Collection de livres DBWeb
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="courseindex-section " id="1-course-index-section-16727" data-for="section" data-id="16727" data-number="3" role="treeitem" aria-owns="courseindexcollapse3" tabindex="-1" aria-selected="false">
+        <div class="courseindex-item d-flex
+                
+                
+                courseindex-section-title" id="courseindexsection3" data-for="section_item" tabindex="-1">
+            <a data-toggle="collapse" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524#courseindexcollapse3" class="courseindex-chevron icons-collapse-expand " aria-expanded="true" aria-controls="courseindexcollapse3" tabindex="-1" data-aria-hidden-tab-index="-1">
+                <span class="collapsed-icon icon-no-margin mr-1" title="Expand" tabindex="-1">
+                    <span class="dir-rtl-hide" tabindex="-1"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="dir-ltr-hide" tabindex="-1"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="sr-only" tabindex="-1">Expand</span>
+                </span>
+                <span class="expanded-icon icon-no-margin mr-1" title="Collapse" tabindex="-1">
+                    <i class="icon fa fa-chevron-down fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    <span class="sr-only" tabindex="-1">Collapse</span>
+                </span>
+            </a>
+            <a href="https://e-uapv2022.univ-avignon.fr/course/view.php?id=3149#section-3" class="courseindex-link text-truncate" data-action="togglecourseindexsection" data-for="section_title" tabindex="-1" data-aria-hidden-tab-index="-1">
+                En pratique
+            </a>
+            <span class="current-badge badge badge-primary ml-2 px-2 rounded-pill" tabindex="-1">
+                Highlighted
+            </span>
+            <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+            </span>
+            <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+        </div>
+        <div id="courseindexcollapse3" class="courseindex-item-content collapse show" aria-labelledby="courseindexsection3" role="group" tabindex="-1">
+            <ul class="courseindex-sectioncontent unlist" data-for="cmlist" data-id="16727" role="group" tabindex="-1">
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13496" data-for="cm" data-id="13496" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_incomplete" data-for="cm_completion" data-value="0" id="yui_3_17_2_1_1684169313033_271">
+        <i class="icon fa fa-circle-thin fa-fw " title="To do" role="img" aria-label="To do"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13496" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Utiliser le serveur web distant du CERI
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13497" data-for="cm" data-id="13497" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_incomplete" data-for="cm_completion" data-value="0" id="yui_3_17_2_1_1684169313033_277">
+        <i class="icon fa fa-circle-thin fa-fw " title="To do" role="img" aria-label="To do"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13497" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Configurer un serveur web local
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13498" data-for="cm" data-id="13498" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_incomplete" data-for="cm_completion" data-value="0" id="yui_3_17_2_1_1684169313033_283">
+        <i class="icon fa fa-circle-thin fa-fw " title="To do" role="img" aria-label="To do"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13498" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                En pratique PHP cookies/sessions
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13499" data-for="cm" data-id="13499" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_incomplete" data-for="cm_completion" data-value="0" id="yui_3_17_2_1_1684169313033_289">
+        <i class="icon fa fa-circle-thin fa-fw " title="To do" role="img" aria-label="To do"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13499" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                En pratique PDO
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="courseindex-section " id="1-course-index-section-16728" data-for="section" data-id="16728" data-number="4" role="treeitem" aria-owns="courseindexcollapse4" tabindex="-1" aria-selected="false">
+        <div class="courseindex-item d-flex
+                
+                
+                courseindex-section-title" id="courseindexsection4" data-for="section_item" tabindex="-1">
+            <a data-toggle="collapse" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524#courseindexcollapse4" class="courseindex-chevron icons-collapse-expand " aria-expanded="true" aria-controls="courseindexcollapse4" tabindex="-1" data-aria-hidden-tab-index="-1">
+                <span class="collapsed-icon icon-no-margin mr-1" title="Expand" tabindex="-1">
+                    <span class="dir-rtl-hide" tabindex="-1"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="dir-ltr-hide" tabindex="-1"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="sr-only" tabindex="-1">Expand</span>
+                </span>
+                <span class="expanded-icon icon-no-margin mr-1" title="Collapse" tabindex="-1">
+                    <i class="icon fa fa-chevron-down fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    <span class="sr-only" tabindex="-1">Collapse</span>
+                </span>
+            </a>
+            <a href="https://e-uapv2022.univ-avignon.fr/course/view.php?id=3149#section-4" class="courseindex-link text-truncate" data-action="togglecourseindexsection" data-for="section_title" tabindex="-1" data-aria-hidden-tab-index="-1">
+                TP 1 : PHP Cookies/sessions - Révisions W3.CSS
+            </a>
+            <span class="current-badge badge badge-primary ml-2 px-2 rounded-pill" tabindex="-1">
+                Highlighted
+            </span>
+            <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+            </span>
+            <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+        </div>
+        <div id="courseindexcollapse4" class="courseindex-item-content collapse show" aria-labelledby="courseindexsection4" role="group" tabindex="-1">
+            <ul class="courseindex-sectioncontent unlist" data-for="cmlist" data-id="16728" role="group" tabindex="-1">
+
+
+                <li class="courseindex-item
+                        
+                        
+                        dimmed
+                         d-flex  
+                        " id="1-course-index-cm-13500" data-for="cm" data-id="13500" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_none" data-for="cm_completion" data-value="NaN" id="yui_3_17_2_1_1684169313033_149"></span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13500" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                TP 1
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13501" data-for="cm" data-id="13501" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_incomplete" data-for="cm_completion" data-value="0" id="yui_3_17_2_1_1684169313033_295">
+        <i class="icon fa fa-circle-thin fa-fw " title="To do" role="img" aria-label="To do"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/bigbluebuttonbn/view.php?id=13501" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Visio TP1 - MERCREDI 22/03 à 20h
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13502" data-for="cm" data-id="13502" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1684169313033_301">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/assign/view.php?id=13502" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Rendu du TP1
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13503" data-for="cm" data-id="13503" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_none" data-for="cm_completion" data-value="NaN" id="yui_3_17_2_1_1684169313033_151"></span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/folder/view.php?id=13503" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Correction TP 1
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="courseindex-section " id="1-course-index-section-16729" data-for="section" data-id="16729" data-number="5" role="treeitem" aria-owns="courseindexcollapse5" tabindex="-1" aria-selected="false">
+        <div class="courseindex-item d-flex
+                
+                
+                courseindex-section-title" id="courseindexsection5" data-for="section_item" tabindex="-1">
+            <a data-toggle="collapse" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524#courseindexcollapse5" class="courseindex-chevron icons-collapse-expand " aria-expanded="true" aria-controls="courseindexcollapse5" tabindex="-1" data-aria-hidden-tab-index="-1">
+                <span class="collapsed-icon icon-no-margin mr-1" title="Expand" tabindex="-1">
+                    <span class="dir-rtl-hide" tabindex="-1"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="dir-ltr-hide" tabindex="-1"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="sr-only" tabindex="-1">Expand</span>
+                </span>
+                <span class="expanded-icon icon-no-margin mr-1" title="Collapse" tabindex="-1">
+                    <i class="icon fa fa-chevron-down fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    <span class="sr-only" tabindex="-1">Collapse</span>
+                </span>
+            </a>
+            <a href="https://e-uapv2022.univ-avignon.fr/course/view.php?id=3149#section-5" class="courseindex-link text-truncate" data-action="togglecourseindexsection" data-for="section_title" tabindex="-1" data-aria-hidden-tab-index="-1">
+                TP 2 : PHP Objet
+            </a>
+            <span class="current-badge badge badge-primary ml-2 px-2 rounded-pill" tabindex="-1">
+                Highlighted
+            </span>
+            <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+            </span>
+            <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+        </div>
+        <div id="courseindexcollapse5" class="courseindex-item-content collapse show" aria-labelledby="courseindexsection5" role="group" tabindex="-1">
+            <ul class="courseindex-sectioncontent unlist" data-for="cmlist" data-id="16729" role="group" tabindex="-1">
+
+
+                <li class="courseindex-item
+                        
+                        
+                        dimmed
+                         d-flex  
+                        " id="1-course-index-cm-13505" data-for="cm" data-id="13505" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_none" data-for="cm_completion" data-value="NaN" id="yui_3_17_2_1_1684169313033_153"></span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13505" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                TP 2
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13506" data-for="cm" data-id="13506" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_incomplete" data-for="cm_completion" data-value="0" id="yui_3_17_2_1_1684169313033_307">
+        <i class="icon fa fa-circle-thin fa-fw " title="To do" role="img" aria-label="To do"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/bigbluebuttonbn/view.php?id=13506" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Visio TP2 - MERCREDI 29/03 à 19h
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13507" data-for="cm" data-id="13507" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1684169313033_313">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/assign/view.php?id=13507" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Rendu du TP2
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13508" data-for="cm" data-id="13508" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_none" data-for="cm_completion" data-value="NaN" id="yui_3_17_2_1_1684169313033_155"></span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/folder/view.php?id=13508" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Correction TP 2
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="courseindex-section " id="1-course-index-section-16730" data-for="section" data-id="16730" data-number="6" role="treeitem" aria-owns="courseindexcollapse6" tabindex="-1" aria-selected="false">
+        <div class="courseindex-item d-flex
+                
+                
+                courseindex-section-title" id="courseindexsection6" data-for="section_item" tabindex="-1">
+            <a data-toggle="collapse" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524#courseindexcollapse6" class="courseindex-chevron icons-collapse-expand " aria-expanded="true" aria-controls="courseindexcollapse6" tabindex="-1" data-aria-hidden-tab-index="-1">
+                <span class="collapsed-icon icon-no-margin mr-1" title="Expand" tabindex="-1">
+                    <span class="dir-rtl-hide" tabindex="-1"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="dir-ltr-hide" tabindex="-1"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="sr-only" tabindex="-1">Expand</span>
+                </span>
+                <span class="expanded-icon icon-no-margin mr-1" title="Collapse" tabindex="-1">
+                    <i class="icon fa fa-chevron-down fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    <span class="sr-only" tabindex="-1">Collapse</span>
+                </span>
+            </a>
+            <a href="https://e-uapv2022.univ-avignon.fr/course/view.php?id=3149#section-6" class="courseindex-link text-truncate" data-action="togglecourseindexsection" data-for="section_title" tabindex="-1" data-aria-hidden-tab-index="-1">
+                TP 3 : JQuery
+            </a>
+            <span class="current-badge badge badge-primary ml-2 px-2 rounded-pill" tabindex="-1">
+                Highlighted
+            </span>
+            <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+            </span>
+            <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+        </div>
+        <div id="courseindexcollapse6" class="courseindex-item-content collapse show" aria-labelledby="courseindexsection6" role="group" tabindex="-1">
+            <ul class="courseindex-sectioncontent unlist" data-for="cmlist" data-id="16730" role="group" tabindex="-1">
+
+
+                <li class="courseindex-item
+                        
+                        
+                        dimmed
+                         d-flex  
+                        " id="1-course-index-cm-13509" data-for="cm" data-id="13509" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_none" data-for="cm_completion" data-value="NaN" id="yui_3_17_2_1_1684169313033_157"></span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13509" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                TP 3
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13511" data-for="cm" data-id="13511" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_incomplete" data-for="cm_completion" data-value="0" id="yui_3_17_2_1_1684169313033_319">
+        <i class="icon fa fa-circle-thin fa-fw " title="To do" role="img" aria-label="To do"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/bigbluebuttonbn/view.php?id=13511" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Visio TP3 - JEUDI 6/04 à 19h
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13512" data-for="cm" data-id="13512" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1684169313033_325">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/assign/view.php?id=13512" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Rendu du TP3
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13513" data-for="cm" data-id="13513" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_none" data-for="cm_completion" data-value="NaN" id="yui_3_17_2_1_1684169313033_159"></span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/folder/view.php?id=13513" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Correction TP 3
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="courseindex-section " id="1-course-index-section-16731" data-for="section" data-id="16731" data-number="7" role="treeitem" aria-owns="courseindexcollapse7" tabindex="-1" aria-selected="false">
+        <div class="courseindex-item d-flex
+                
+                
+                courseindex-section-title" id="courseindexsection7" data-for="section_item" tabindex="-1">
+            <a data-toggle="collapse" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524#courseindexcollapse7" class="courseindex-chevron icons-collapse-expand " aria-expanded="true" aria-controls="courseindexcollapse7" tabindex="-1" data-aria-hidden-tab-index="-1">
+                <span class="collapsed-icon icon-no-margin mr-1" title="Expand" tabindex="-1">
+                    <span class="dir-rtl-hide" tabindex="-1"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="dir-ltr-hide" tabindex="-1"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="sr-only" tabindex="-1">Expand</span>
+                </span>
+                <span class="expanded-icon icon-no-margin mr-1" title="Collapse" tabindex="-1">
+                    <i class="icon fa fa-chevron-down fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    <span class="sr-only" tabindex="-1">Collapse</span>
+                </span>
+            </a>
+            <a href="https://e-uapv2022.univ-avignon.fr/course/view.php?id=3149#section-7" class="courseindex-link text-truncate" data-action="togglecourseindexsection" data-for="section_title" tabindex="-1" data-aria-hidden-tab-index="-1">
+                TP noté 1
+            </a>
+            <span class="current-badge badge badge-primary ml-2 px-2 rounded-pill" tabindex="-1">
+                Highlighted
+            </span>
+            <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+            </span>
+            <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+        </div>
+        <div id="courseindexcollapse7" class="courseindex-item-content collapse show" aria-labelledby="courseindexsection7" role="group" tabindex="-1">
+            <ul class="courseindex-sectioncontent unlist" data-for="cmlist" data-id="16731" role="group" tabindex="-1">
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-68018" data-for="cm" data-id="68018" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_none" data-for="cm_completion" data-value="NaN" id="yui_3_17_2_1_1684169313033_161"></span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=68018" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                TP noté 1
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13516" data-for="cm" data-id="13516" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1684169313033_331">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/assign/view.php?id=13516" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Rendu du TP noté 1
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13518" data-for="cm" data-id="13518" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_none" data-for="cm_completion" data-value="NaN" id="yui_3_17_2_1_1684169313033_163"></span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/folder/view.php?id=13518" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Correction TP noté 1
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="courseindex-section " id="1-course-index-section-16732" data-for="section" data-id="16732" data-number="8" role="treeitem" aria-owns="courseindexcollapse8" tabindex="-1" aria-selected="false">
+        <div class="courseindex-item d-flex
+                
+                
+                courseindex-section-title" id="courseindexsection8" data-for="section_item" tabindex="-1">
+            <a data-toggle="collapse" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524#courseindexcollapse8" class="courseindex-chevron icons-collapse-expand " aria-expanded="true" aria-controls="courseindexcollapse8" tabindex="-1" data-aria-hidden-tab-index="-1">
+                <span class="collapsed-icon icon-no-margin mr-1" title="Expand" tabindex="-1">
+                    <span class="dir-rtl-hide" tabindex="-1"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="dir-ltr-hide" tabindex="-1"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="sr-only" tabindex="-1">Expand</span>
+                </span>
+                <span class="expanded-icon icon-no-margin mr-1" title="Collapse" tabindex="-1">
+                    <i class="icon fa fa-chevron-down fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    <span class="sr-only" tabindex="-1">Collapse</span>
+                </span>
+            </a>
+            <a href="https://e-uapv2022.univ-avignon.fr/course/view.php?id=3149#section-8" class="courseindex-link text-truncate" data-action="togglecourseindexsection" data-for="section_title" tabindex="-1" data-aria-hidden-tab-index="-1">
+                TP 4 : PHP PDO
+            </a>
+            <span class="current-badge badge badge-primary ml-2 px-2 rounded-pill" tabindex="-1">
+                Highlighted
+            </span>
+            <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+            </span>
+            <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+        </div>
+        <div id="courseindexcollapse8" class="courseindex-item-content collapse show" aria-labelledby="courseindexsection8" role="group" tabindex="-1">
+            <ul class="courseindex-sectioncontent unlist" data-for="cmlist" data-id="16732" role="group" tabindex="-1">
+
+
+                <li class="courseindex-item
+                        
+                        
+                        dimmed
+                         d-flex  
+                        " id="1-course-index-cm-13519" data-for="cm" data-id="13519" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_none" data-for="cm_completion" data-value="NaN" id="yui_3_17_2_1_1684169313033_165"></span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13519" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                TP 4
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13521" data-for="cm" data-id="13521" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_incomplete" data-for="cm_completion" data-value="0" id="yui_3_17_2_1_1684169313033_337">
+        <i class="icon fa fa-circle-thin fa-fw " title="To do" role="img" aria-label="To do"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/bigbluebuttonbn/view.php?id=13521" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Visio TP4 - JEUDI 20/04 à 18h00
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13522" data-for="cm" data-id="13522" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1684169313033_343">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/assign/view.php?id=13522" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Rendu du TP4
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13523" data-for="cm" data-id="13523" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_none" data-for="cm_completion" data-value="NaN" id="yui_3_17_2_1_1684169313033_167"></span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/folder/view.php?id=13523" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Correction TP 4
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="courseindex-section " id="1-course-index-section-16733" data-for="section" data-id="16733" data-number="9" role="treeitem" aria-owns="courseindexcollapse9" tabindex="-1" aria-selected="false">
+        <div class="courseindex-item d-flex
+                
+                
+                courseindex-section-title" id="courseindexsection9" data-for="section_item" tabindex="-1">
+            <a data-toggle="collapse" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524#courseindexcollapse9" class="courseindex-chevron icons-collapse-expand " aria-expanded="true" aria-controls="courseindexcollapse9" tabindex="-1" data-aria-hidden-tab-index="-1">
+                <span class="collapsed-icon icon-no-margin mr-1" title="Expand" tabindex="-1">
+                    <span class="dir-rtl-hide" tabindex="-1"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="dir-ltr-hide" tabindex="-1"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="sr-only" tabindex="-1">Expand</span>
+                </span>
+                <span class="expanded-icon icon-no-margin mr-1" title="Collapse" tabindex="-1">
+                    <i class="icon fa fa-chevron-down fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    <span class="sr-only" tabindex="-1">Collapse</span>
+                </span>
+            </a>
+            <a href="https://e-uapv2022.univ-avignon.fr/course/view.php?id=3149#section-9" class="courseindex-link text-truncate" data-action="togglecourseindexsection" data-for="section_title" tabindex="-1" data-aria-hidden-tab-index="-1">
+                Mini-projet
+            </a>
+            <span class="current-badge badge badge-primary ml-2 px-2 rounded-pill" tabindex="-1">
+                Highlighted
+            </span>
+            <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+            </span>
+            <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+        </div>
+        <div id="courseindexcollapse9" class="courseindex-item-content collapse show" aria-labelledby="courseindexsection9" role="group" tabindex="-1">
+            <ul class="courseindex-sectioncontent unlist" data-for="cmlist" data-id="16733" role="group" tabindex="-1">
+
+
+                <li class="courseindex-item d-flex pageitem" id="1-course-index-cm-13524" data-for="cm" data-id="13524" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_none" data-for="cm_completion" data-value="NaN" id="yui_3_17_2_1_1684169313033_169"></span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/page/view.php?id=13524" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Sujet du mini-projet
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13527" data-for="cm" data-id="13527" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_incomplete" data-for="cm_completion" data-value="0" id="yui_3_17_2_1_1684169313033_349">
+        <i class="icon fa fa-circle-thin fa-fw " title="To do" role="img" aria-label="To do"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/bigbluebuttonbn/view.php?id=13527" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Visio Mini-projet - JEUDI 4/05 à 15h30
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="1-course-index-cm-13529" data-for="cm" data-id="13529" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1684169313033_355">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="https://e-uapv2022.univ-avignon.fr/mod/assign/view.php?id=13529" data-for="cm_name" tabindex="-1" data-aria-hidden-tab-index="-1">
+                                Rendu du mini-projet
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+    </div>
+</nav>
+
+    </div>
+</div>
+    <div id="page" data-region="mainpage" data-usertour="scroller" class="drawers   drag-container">
+        <div id="topofscroll" class="main-inner">
+            <div class="drawer-toggles d-flex">
+                    <div class="drawer-toggler drawer-left-toggle open-nav d-print-none">
+                        <button class="btn icon-no-margin" data-toggler="drawers" data-action="toggle" data-target="theme_boost-drawers-courseindex" data-toggle="tooltip" data-placement="right" title="Open course index">
+                            <span class="sr-only">Open course index</span>
+                            <i class="icon fa fa-list fa-fw " aria-hidden="true"></i>
+                        </button>
+                    </div>
+            </div>
+            <header id="page-header" class="header-maxwidth d-print-none">
+    <div class="w-100">
+        <div class="d-flex flex-wrap">
+            <div id="page-navbar">
+                <nav aria-label="Navigation bar">
+    <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="https://e-uapv2022.univ-avignon.fr/course/view.php?id=3149#section-9" title="ue dbweb 4 architecture web et base de donnees (S-U06-0077)">ue dbweb 4 architecture web et base de donnees (S-U06-0077)</a>
+                </li>
+        
+                <li class="breadcrumb-item"><span>Sujet du mini-projet</span></li>
+        </ol>
+</nav>
+            </div>
+            <div class="ml-auto d-flex">
+                
+            </div>
+            <div id="course-header">
+                
+            </div>
+        </div>
+        <div class="d-flex align-items-center">
+                    <div class="mr-auto">
+                        <div class="page-context-header"><div class="page-header-image mr-2"><div class="content activityiconcontainer modicon_page"><img class="icon activityicon " aria-hidden="true" src="./ue dbweb 4 architecture web et base de donnees (S-U06-0077)_ Sujet du mini-projet_files/monologo.svg" alt=""></div></div><div class="page-header-headings"><h1 class="h2">Sujet du mini-projet</h1></div></div>
+                    </div>
+            <div class="header-actions-container ml-auto" data-region="header-actions-container">
+            </div>
+        </div>
+    </div>
+</header>
+
+<h3>EXERCICE DE L'ETUDIANT (LOUIS RIVES-LEHTINEN) : </h3>
+<h5>Projet : <br>
+<a href="login.php">login.php</a> : Se connecter avec le prénom nom et le mdp est l'id du client. Se connecter nous dirige directement sur la page commande.php de l'utilisateur. Selon si l'utilisateur est admin ou non, il débloquera certains accès sur sa page de commande à travers des liens (ex: la page client.php ainsi que magasinsparproduit.php et etatdescommandes.php)
+<br>
+<a href="client.php">client.php</a><br>
+            <div id="page-content" class="pb-3 d-print-block">
+                <div id="region-main-box">
+                    <section id="region-main" aria-label="Content">
+
+                        <span class="notifications" id="user-notifications"></span>
+                            <span id="maincontent"></span>
+                            <div class="activity-header" data-for="page-activity-header"></div>
+                        <div role="main" id="yui_3_17_2_1_1684169313033_358"><div class="box py-3 generalbox center clearfix" id="yui_3_17_2_1_1684169313033_357"><div class="no-overflow" id="yui_3_17_2_1_1684169313033_356"><!-- <h2> Site d'entreprise locale</h2>
+    <p>Un commercant de votre quartier souhaiterait vendre ses produits par correspondance sur internet. Il peut s'agir de livres, composants électroniques, melons... à vous de choisir. Comme il connait la réputation de l'Université d'Avignon, il fait appel à vous.</p>
+    <p>L'objectif est de gérer certaines fonctions de l'achat par internet :</p>
+    <ul>
+      <li>achat d'un ou plusieurs produit(s) par un client.</li>
+      <li>consultation de l'état des ventes (après authentification) par le marchand.</li>
+      <li>modification des prix / ajout d'un nouvel article (après authentification) par le marchand.</li>
+    </ul>
+    <p>Dans un premier temps, on considèrera une situation simplifiée :</p>
+    <ul>
+      <li>sans de suivi de commande : pas de création de compte client,</li>
+      <li>sans consultation de sa commande après avoir commandé.</li>
+      <li>sans paiement en ligne sécurisé.</li>
+      <li>sans gestion des stocks (i.e. pas de contraintes sur le nombre de produits disponibles à l'achat).</li>
+    </ul>-->
+<h2><span style="color: inherit; font-family: inherit; font-size: 31.5px; font-weight: bold;">Mini-projet -- Site myBike, compléments</span></h2>
+<p>L'objectif du mini-projet est de compléter la version préliminaire d'un site de gestion de commandes de clients de magasins de cyclisme, débuté lors du TP 4. Les différentes améliorations proposées sont listées ci-dessous.</p>
+<p><strong>Attention :</strong> Le rendu du mini-projet devra être fait au plus tard la veille du TP noté 2 : une archive déposée dans "Rendu du mini-projet" et une version disponible en ligne sur pedago.univ-avignon.fr (le lien vers ce site doit être ajouté en commentaire au début du fichier clients.php).</p>
+<h4>Partie 1 - Modélisation des classes</h4>
+<p>Dans un premier temps un modèle de classe doit être implémenté pour les données.</p>
+<p><strong>A faire</strong></p>
+<ol>
+<li>A partir des caractéristiques fournies par la base de données, établir le schéma de classe pour le projet.<br><strong>Attention</strong> : les classes PHP reflètent les objets ISSUS de la base de données pour le programme : i.e. les données telles qu'on les utilisent dans le PHP, pas forcément exactement comme elles sont dans la BD.<br><strong>Attention</strong> : et donc ces classes devront être conçues en anticipant les modifications du programme demandées dans la Partie 2 (création des nouvelles pages).</li>
+<li>Proposer une visualisation du modèle (qui sera déposé dans un fichier à part lors du rendu). Par exemple avec yuml.me, ou au pire une photo d'un graphe manuel.</li>
+<li>Modifier la méthode _toString de chaque classe, afin de régler l'affichage en HTML de chaque classe</li>
+</ol>
+<h4>Partie 2 - Intégration PHP/PDO</h4>
+<p>Il s'agit ici de compléter les fonctionnalités du site initial après avoir adapté le site aux nouvelles classes élaborées ci-dessus.</p>
+<p><strong>A faire</strong></p>
+<ol>
+<li><strong>Transformer la version du site du TP 4</strong> pour prendre en compte la nouvelle modélisation en classes et récupérer les données de la BD sous forme d'objets (FETCH_CLASS).</li>
+<li><span style="text-decoration: line-through;"></span>Créer une <strong>nouvelle page etatdescommandes.php</strong> pour afficher un tableau avec toutes les vélos possibles (products) classés par le nombre de ventes.</li><li>Chaque produit possède un lien vers une <strong>nouvelle&nbsp;</strong><span><strong>page </strong><strong>magasins</strong></span><strong>parproduit.php</strong> qui affiche la liste des magasins qui ont acheté ce produit. Et pour chaque magasins le nombre de commandes de ce produit (tout statut de la commande compris).<br></li><li>On ajoute ensuite des <strong>colonnes dans magasinsparproduit.php</strong> permettant : 1/ d'afficher le nombre de produits en commandes en cours (status) ; 2/ d'afficher le stock global correspondant (pour tous les magasins).</li>
+<li>Intégrer une <strong>gestion des droits d'accès</strong> : maintenant seuls les clients connectés au site peuvent voir <span style="text-decoration: line-through;"></span>l'état des commandes. Les identifiants sont le nom pour le login et l'id pour le mot de passe. De plus les clients de la base ont maintenant un statut optionnel 'admin' (binaire). Seuls les utilisateurs admin peuvent accéder à la visualisation de la page <strong>magasinsparproduit.php</strong>. &nbsp;<br><strong>Attention</strong> : la prise en compte du statut conduit à modifier la BD. Penser a bien mettre la ligne SQL utilisée en commentaire dans votre fichier .php. Et a sauvegarder une nouvelle version de la BD (comme dans le fichier fourni au TP4, avec un dump en CLI) pour la recharger en cas de problèmes.</li>
+<li>Permettre l'<strong>ajout et la modification des clients</strong> : depuis la <strong><span>page clients.ph</span>p</strong>, proposer l'accès à un modal dans lequel un administrateur (client avec un statut admin) peut saisir un id client. Si cet id n'existe pas : un nouveau client est créé et ses champs sont saisis. Si l'id existe, il s'agira d'une mise à jour (affichage des ses champs puis modifications possibles, changement de statut par exemple). Les comptes admin sont protégés, aucune mise à jour ne doit être possible sur ces clients.<br><span style="font-size: 0.9375rem;"><strong>Attention</strong> : la logique voudrait que les comptes admin soient plutôt associés aux personnels des magasins (staffs). Nous avons choisis de rester sur les clients pour simplifier les requêtes DB nécessaires. &nbsp;</span></li>
+</ol>
+<h4>Partie 3 - Amélioration UX jQuery</h4>
+<p>Dans cette dernière partie il s'agit de reprendre certaines pages du site pour améliorer l'expérience utilisateur en lui ajoutant des fonctionnalités d'affichage dynamique par le biais de la librairie jQuery.</p>
+<p><strong>A faire</strong><span style="text-decoration: line-through;"><br></span></p>
+<ol>
+<li>Dans la page commandes.php, le passage de la souris sur la ligne d'une commande provoque un passage en jaune de la ligne.&nbsp;</li>
+<li>Dans la page clients.php, lors du passage de la souris sur un client avec un statut "admin" un zoom automatique est fait sur son nom pour en faciliter la lecture.</li>
+</ol>
+<h4>Consignes</h4>
+<p>Les fonctions du site seront developpées en&nbsp;<strong>HTML, CSS, JavaScript et PHP</strong>&nbsp;(à l'exclusion de tout autre langage).</p>
+<p>La base de données est hébergée sur pedago.univ-avignon.fr.</p>
+<p>L'aspect "physique" du site sera réalisé&nbsp;<span>principalement</span>&nbsp;avec&nbsp;<strong>W3.CSS</strong>. Le site devra être&nbsp;<strong>responsive</strong>&nbsp;: adapter son affichage en fonction de la taille de l'écran. Pour cela prévoir les 2 cas extremes (grand écran et smartphone) et montrer les modifications introduites en passant d'un cas à l'autre.</p>
+<p>Une fois les fonctions précédentes réalisées, tout ajout pourra être envisagé dans la mesure où son apport au site est justifié.</p>
+<p>© CERI, Sujet proposé en 2023.</p></div></div><div class="modified">Last modified: Wednesday, 19 April 2023, 12:14 PM</div></div>
+                        
+                        
+
+                    </section>
+                </div>
+            </div>
+        </div>
+        
+        <footer id="page-footer" class="footer-popover bg-white">
+            <div data-region="footer-container-popover">
+                <button class="btn btn-icon bg-secondary icon-no-margin btn-footer-popover" data-action="footer-popover" aria-label="Show footer" data-original-title="" title="">
+                    <i class="icon fa fa-question fa-fw " aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="footer-content-popover container" data-region="footer-content-popover">
+                    <div class="footer-section p-3 border-bottom">
+        
+        
+                            <div><a href="https://e-uapv2022.univ-avignon.fr/user/contactsitesupport.php"><i class="icon fa fa-envelope-o fa-fw " aria-hidden="true"></i>Contact site support</a></div>
+                    </div>
+                <div class="footer-section p-3 border-bottom">
+                    <div class="logininfo">
+                        <div class="logininfo">You are logged in as <a href="https://e-uapv2022.univ-avignon.fr/user/profile.php?id=6138" title="View profile">Louis Rives-Lehtinen</a> (<a href="https://e-uapv2022.univ-avignon.fr/login/logout.php?sesskey=T4tHODGCHa">Log out</a>)</div>
+                    </div>
+                    <div class="tool_usertours-resettourcontainer">
+                    </div>
+        
+                    <div class="tool_dataprivacy"><a href="https://e-uapv2022.univ-avignon.fr/admin/tool/dataprivacy/summary.php">Data retention summary</a></div><a href="https://download.moodle.org/mobile?version=2022041908.02&amp;lang=en&amp;iosappid=633359593&amp;androidappid=com.moodle.moodlemobile">Get the mobile app</a>
+                    
+<script>
+//pour chaque ajout d'activité dans le js, penser à l'ajouter aussi dans le css
+
+console.log('script apui présent');
+
+const d = document;
+const b = d.querySelectorAll("body")[0];
+const icons = { 
+    "Atelier" : "workshop",
+    "Base de données" : "data",
+    "BigBlueButton" : "bigbluebuttonbn",
+    "Chat-AU" : "rocketchat",
+    "Choix de Groupe" : "choicegroup",
+    "Consultation" : "survey",
+    "Devoir" : "assign",
+    "Dossier" : "folder",
+    "Débat" : "debate",
+    "Feedback" : "feedback",
+    "Fichier" : "resource",
+    "Forum" : "forum",
+    "Galerie d'images" : "lightboxgallery",
+    "Glossaire" : "glossary",
+    "H5P" : "h5pactivity",
+    "Jeu - Mots croisés" : "game",
+    "Jeu - Mots mêlés" : "game-mixword",
+    "Jeu - Pendu" : "game-hangman",
+    "Jeu - Qui veut gagner des millions" : "game-millionaire",
+    "Leçon" : "lesson",
+    "Liste des tâches" : "checklist",
+    "Livre" : "book",
+    "Outil externe" : "lti",
+    "Page" : "page",
+    "Paquetage IMS Content" : "imscp",
+    "Paquetage SCORM" : "scorm",
+    "Présence" : "attendance",
+    "Questionnaire" : "questionnaire",
+    // "Note" : "stickynotes",
+    "Rendez-vous" : "scheduler",
+    "Sondage" : "choice",
+    "Test" : "quiz",
+    "Test hors-ligne" : "offlinequiz",
+    "URL" : "url",
+    "Vote électronique" : "evoting",
+    "Wiki" : "wiki",
+    "Étiquette" : "label"
+};
+var isActivityTable = 0;
+
+
+// vérifie le changement des classes sur l'élement body 
+const obsBody = new MutationObserver(function (event) {
+
+    // nouvelles icones pour la page de restauration de cours
+    if(b.classList.contains("path-backup")){
+
+console.log('path-backup');
+
+        // pour le tableau .activitytable
+        if(b.querySelector(".activitytable")){
+
+            if(isActivityTable === 0){
+
+                console.log('activitytable');
+                const tables = b.querySelectorAll(".activitytable");
+
+                for(j = 0; j < tables.length; j++){
+
+                    const table = tables[j];
+                    const tableIcons = table.querySelectorAll(".icon");
+                    
+                    for(i = 0; i < tableIcons.length; i++){
+                        const thisIcon = tableIcons[i];
+                        const srcIcon = thisIcon.src;
+                        var isMatch = false;
+                        var elIcon = "";
+                        for(key in icons) {
+                            if(icons.hasOwnProperty(key)) {
+                                var icon = icons[key];
+                                var regexObj = new RegExp(icon,'gi'); 
+                                if(regexObj.test(srcIcon)){
+                                    elIcon = icon;
+                                    isMatch = true;
+                                }
+                            }
+                        }
+                        if(isMatch){
+                            const module = thisIcon.closest('.modulename');
+                            const span = d.createElement("span");
+                            span.classList.add(elIcon,'activity-icon');
+                            module.prepend(span);
+                            console.log('one' + elIcon);
+                            thisIcon.classList.add('d-none');
+                        }
+                    }
+
+                }
+            
+            }
+
+            isActivityTable++;
+
+        }
+    }
+
+    // nouvelles icones pour la page cours qui liste toutes les activités
+    if(b.querySelectorAll(".activity")){
+
+console.log('activity');
+        
+        const courseActivities = b.querySelectorAll(".activity.game");
+        
+        // classe unique sur chaque icone de jeu
+        courseActivities.forEach(function (courseActivity, index) { 
+            const courseActivitiesDiv = courseActivity.querySelector('.activity-item');
+            const courseActivitiesName = courseActivitiesDiv.getAttribute('data-activityname');
+            const courseActivityCssClass = "modtype_" + icons["Jeu - " + courseActivitiesName];
+            const courseActivityTitle = courseActivity.querySelector('.activitytitle');
+            courseActivityTitle.classList.add(courseActivityCssClass);
+        })
+
+    }
+
+    // nouvelles icones pour la popin qui liste toutes les activités à ajouter
+    if(b.querySelector(".modchooser")){
+        
+        // la popin pour choisir les activités s'est ouverte
+        
+        const modalActivityChooser = b.querySelector(".modchooser");
+        const obsModalActivityChooser = new MutationObserver(function (event) {
+            
+            // le contenu de la popin a changé
+            
+            // pour la popin principale
+            const activityicons = modalActivityChooser.querySelectorAll(".activityiconcontainer");
+            if(activityicons.length > 0){
+                
+                // classe unique sur chaque icone de jeu
+                activityicons.forEach(function (activityicon, index) { 
+                    const activityLink = activityicon.closest('a');
+                    if(/add=game/.test(activityLink.href)){ 
+                        const activityTitle = activityLink.querySelector(".optionname");
+                        const activityText = activityTitle.innerText;
+                        const activityDiv = activityicon.closest('div');
+                        const activityCssClass = "modicon_" + icons[activityText];
+                        activityDiv.classList.add(activityCssClass);
+                        console.log('pendu');
+                    }
+                });
+
+            }
+
+            // pour la popin de détail d'une activité
+            if(modalActivityChooser.querySelector(".heading > h5")){
+
+                // la popin a un titre avec h5
+                const modaltitle = modalActivityChooser.querySelector(".heading > h5");
+                const mondaltext = modaltitle.innerText;
+                const cssclass = icons[mondaltext];
+                const addclass = "modicon_" + cssclass;
+                modaltitle.classList.add(addclass,"activitytitle");
+
+            }
+            
+        })
+        obsModalActivityChooser.observe(modalActivityChooser,{
+            attributes: false, 
+            characterData: true,
+            childList: true,
+            subtree: true
+        });
+    }
+})
+obsBody.observe(b, {
+  attributes: true, 
+  attributeFilter: ['class'],
+  childList: false, 
+  characterData: false
+})
+
+/*
+// ajout d'un lien vers EFE dans la barre de navigation
+const nav = d.querySelector(".navbar");
+const bloc = nav.querySelector(".ml-auto");
+const link = d.createElement("a");
+link.innerHTML = "&Eacute;valuation des formations";
+link.href = "https://efe.univ-avignon.fr/";
+link.classList.add("efe");
+link.setAttribute("title", "Retours Ã©tudiants sur les enseignements");
+link.setAttribute("target", "_blank");
+link.setAttribute("style", "padding-left:32px;background: transparent url('https://mapui.univ-avignon.fr/js-moodle-2022/graph.svg') no-repeat left center");
+bloc.prepend(link);
+*/
+</script>
+
+<script>
+
+/* popup coupure d'élec */
+/*
+
+//wait for the DOM to load
+document.addEventListener("DOMContentLoaded", function() {
+	//popup content
+	let apuiPopupHtmlContent = "<p style='color:red;'>Dans le cadre de la préparation aux potentielles coupures électriques imposées par le gouvernement, la DOSI arrête l'ensemble des services numériques de l'Université afin de faire un test. <b>La plateforme pédagogique sera complètement inaccessible ou très perturbée entre 20h et 23h le 12 décembre.</b> Merci de votre compréhension&nbsp;!</p>";
+	//to create a cookie
+	function createCookie(name,value,days) {
+		var expires;
+		if (days) {
+			var date = new Date();
+			date.setTime(date.getTime()+(days*24*60*60*1000));
+			expires = "; expires=" + date.toGMTString();
+		} else {
+			expires = "";
+		}
+		document.cookie = name + "=" + value+expires + "; path=/; secure;domain=e-uapv2022.univ-avignon.fr";
+	}
+	//to read a cookie
+	function readCookie(name) {
+		var nameEQ = name + "=";
+		var ca = document.cookie.split(';');
+		for(var i=0;i < ca.length;i++) {
+			var c = ca[i];
+			while (c.charAt(0) ===' ') {
+				c = c.substring(1,c.length);
+			}
+			if (c.indexOf(nameEQ) === 0) {
+				return c.substring(nameEQ.length,c.length);
+			}
+		}
+		return null;
+	}
+	//to erase a cookie
+	function eraseCookie(name) {
+		createCookie(name,"",-1);
+	}
+	//we read the cookie
+	let apuiCookie = readCookie('apuiPopup');
+	console.log(apuiCookie);
+	//if there is no cookie or the value is not true
+	if(!apuiCookie && apuiCookie !== 'true'){
+		console.log('cookie not ok')
+		//then we create and append a Popup directly to the body
+		let $apuiBody = document.querySelector('body');
+		let apuiDiv = document.createElement('div');
+		let apuiBg = document.createElement('div');
+		let apuiClose = document.createElement('button');
+		apuiDiv.classList.add('apui-popup');
+		apuiDiv.innerHTML = apuiPopupHtmlContent;
+		apuiBg.classList.add('apui-popup-bg');
+		apuiClose.classList.add('apui-popup-close');
+		apuiClose.innerHTML = "Ne plus afficher";
+		$apuiBody.prepend(apuiDiv);
+		$apuiBody.prepend(apuiBg);
+		apuiDiv.append(apuiClose);
+		//when the user click on the close button
+		apuiClose.addEventListener('click', function(e) {
+			//we remove all Popup's elements
+			apuiDiv.remove();
+			apuiBg.remove();
+			apuiClose.remove();
+            //we create a cookie with true as a value
+            createCookie('apuiPopup','true',.5); // .5 for 12h
+            //so next time the cookie will be there (if its before 24h)
+		});
+	}
+});
+
+*/
+
+</script>
+
+<script src="./ue dbweb 4 architecture web et base de donnees (S-U06-0077)_ Sujet du mini-projet_files/highlight.min.js.téléchargement"></script>
+<script>hljs.highlightAll();</script><script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://e-uapv2022.univ-avignon.fr/lib/requirejs.php/1683275310/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://e-uapv2022.univ-avignon.fr/lib/javascript.php/1683275310/lib/jquery/jquery-3.6.0.min',
+        jqueryui: 'https://e-uapv2022.univ-avignon.fr/lib/javascript.php/1683275310/lib/jquery/ui-1.13.0/jquery-ui.min',
+        jqueryprivate: 'https://e-uapv2022.univ-avignon.fr/lib/javascript.php/1683275310/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="./ue dbweb 4 architecture web et base de donnees (S-U06-0077)_ Sujet du mini-projet_files/javascript(3).php"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('en');
+});;
+M.util.js_pending('core_courseformat/courseeditor'); require(['core_courseformat/courseeditor'], function(amd) {amd.setViewFormat("3149", {"editing":false,"supportscomponents":true,"statekey":"1683878919_1684169214"}); M.util.js_complete('core_courseformat/courseeditor');});;
+
+require(['core_courseformat/local/courseindex/placeholder'], function(component) {
+    component.init('64626262709e864626262709ec1-course-index-placeholder');
+});
+;
+
+require(['core_courseformat/local/courseindex/drawer'], function(component) {
+    component.init('courseindex');
+});
+;
+M.util.js_pending('core_courseformat/local/content/activity_header'); require(['core_courseformat/local/content/activity_header'], function(amd) {amd.init(); M.util.js_complete('core_courseformat/local/content/activity_header');});;
+
+    require(['core/moremenu'], function(moremenu) {
+        moremenu(document.querySelector('#moremenu-64626262850cd-navbar-nav'));
+    });
+;
+
+require(['jquery', 'message_popup/notification_popover_controller'], function($, Controller) {
+    var container = $('#nav-notification-popover-container');
+    var controller = new Controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+
+    require(['core/usermenu'], function(UserMenu) {
+        UserMenu.init();
+    });
+;
+
+require(['theme_boost/drawers']);
+;
+
+require(['theme_boost/drawers']);
+;
+
+require(['theme_boost/footer-popover'], function(FooterPopover) {
+    FooterPopover.init();
+});
+;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader', 'theme_boost/drawer'], function(Loader, Drawer) {
+    Drawer.init();
+    M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(20232, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Last modified","name":"Name","error":"Error","info":"Information","yes":"Yes","no":"No","ok":"OK","cancel":"Cancel","confirm":"Confirm","areyousure":"Are you sure?","closebuttontitle":"Close","unknownerror":"Unknown error","file":"File","url":"URL","collapseall":"Collapse all","expandall":"Expand all"},"repository":{"type":"Type","size":"Size","invalidjson":"Invalid JSON string","nofilesattached":"No files attached","filepicker":"File picker","logout":"Logout","nofilesavailable":"No files available","norepositoriesavailable":"Sorry, none of your current repositories can return files in the required format.","fileexistsdialogheader":"File exists","fileexistsdialog_editor":"A file with that name has already been attached to the text you are editing.","fileexistsdialog_filemanager":"A file with that name has already been attached","renameto":"Rename to \"{$a}\"","referencesexist":"There are {$a} links to this file","select":"Select"},"admin":{"confirmdeletecomments":"You are about to delete comments, are you sure?","confirmation":"Confirmation"},"debug":{"debuginfo":"Debug info","line":"Line","stacktrace":"Stack trace"},"langconfig":{"labelsep":": "}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"en"});
+});
+Y.use("moodle-filter_glossary-autolinker",function() {M.filter_glossary.init_filter_autolinking({"courseid":0});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random64626262709ec4'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random64626262709ec4'); });
+})();
+//]]>
+</script>
+
+                </div>
+                <div class="footer-section p-3">
+                    <div>Powered by <a href="https://moodle.com/">Moodle</a></div>
+                </div>
+            </div>
+        
+            <div class="footer-content-debugging footer-dark bg-dark text-light">
+                <div class="container-fluid footer-dark-inner">
+                    
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+</div><div id="yui3-css-stamp" style="position: absolute !important; visibility: hidden !important" class=""></div>
+
+
+<div></div></body></html>
